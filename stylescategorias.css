@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.logo-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-button a {
+    text-decoration: none;
+}
+
+.logo-button button {
+    background-color: blue;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.search-bar {
+    flex: 2;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+}
+
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    background-color: white;
+    color: gray;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.intro {
+    text-align: left;
+    padding: 20px;
+}
+
+.intro-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin-top: 20px;
+    align-content: center;
+    
+}
+
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: auto;
+    align-content: center;
+    margin-bottom: 70px;
+    margin-left: 100px;
+   
+}
+
+.custom-card {
+    margin: 10px 5px;
+    padding: 0;
+    align-content: center;
+  
+}
+
+.custom-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Asegura que las imágenes se adapten a la tarjeta */
+}
+
+.card-title{
+    font-size: 20px;
+    align-content: center;
+    padding-left: 20px;
+}
+.card-text {
+    white-space: normal; /* Permitir el quiebre de línea en los textos */
+    padding-left: 5px;
+}
+
+.card-body {
+    text-align: left; /* Alineación del texto dentro de las tarjetas */
+    align-content: center;
+
+}
+
+footer {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 30%;
+    text-align: center;
+}
+
+/* Estilos que serán responsivos */
+
+/* tamaño grande */
+@media (min-width: 992px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra las tarjetas */
+    }
+
+    .custom-card {
+        width: 30%;
+    }
+}
+
+/* tamaño mediano */
+@media (min-width: 768px) and (max-width: 991px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra las tarjetas */
+    }
+
+    .custom-card {
+        width: 45%;
+    }
+}
+
+/* tamaño pequeño */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .logo-button button {
+        font-size: 1em; /* Hacer el logo más pequeño en pantallas pequeñas */
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra las tarjetas */
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
